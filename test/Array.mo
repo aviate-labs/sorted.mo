@@ -4,8 +4,6 @@ import O "../src/Order";
 import Order "mo:base/Order";
 import SArray "../src/Array";
 
-import Debug "mo:base/Debug";
-
 do {
     let desc = O.Descending(Nat.compare);
     var l : SArray.SortedArray<Nat> = [];
