@@ -59,6 +59,23 @@ module {
             List.get(keys, n);
         };
 
+        // Gets the value based on its index.
+        public func getValue(n : Nat) : ?V {
+            switch (getKey(n)) {
+                case (null) { null; };
+                case (? k)  {
+                    switch (get(k)) {
+                        case (null) {
+                            // panic: keys and map out of sync.
+                            assert(false);
+                            null;
+                        };
+                        case (? v) { ?v; };
+                    };
+                };
+            };
+        };
+
         // Gets the index of the key k. Returns its associated index if it
         // existed or null otherwise.
         public func getIndex(k : K) : ?Nat {
@@ -168,6 +185,23 @@ module {
         // Gets the key based on its index.
         public func getKey(n : Nat) : ?K {
             List.get(keys, n);
+        };
+
+        // Gets the value based on its index.
+        public func getValue(n : Nat) : ?V {
+            switch (getKey(n)) {
+                case (null) { null; };
+                case (? k)  {
+                    switch (get(k)) {
+                        case (null) {
+                            // panic: keys and map out of sync.
+                            assert(false);
+                            null;
+                        };
+                        case (? v) { ?v; };
+                    };
+                };
+            };
         };
 
         // Gets the index of the key k. Returns its associated index if it

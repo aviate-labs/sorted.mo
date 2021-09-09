@@ -23,6 +23,7 @@ do {
     assert(m.getIndex(1) == null);
     assert(m.getIndex(0) == ?1);
     assert(m.getKey(1) == ?0);
+    assert(m.getValue(1) == ?"b");
 };
 
 do {
@@ -41,4 +42,5 @@ do {
     assert(m.getIndex(0) == null);
     assert(m.getIndex(2) == ?1);
     assert(m.getKey(1) == ?2);
+    assert(m.getValue(1) == ?"c");
 };
