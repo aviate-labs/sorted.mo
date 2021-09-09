@@ -29,7 +29,7 @@ do {
     l := SArray.insert<X>(l, ("c", 2), desc);
     assert(l == [("c", 2), ("a", 1), ("b", 0)]);
 
-        // Delete
+    // Delete
     func eq(x : X, y : X) : Bool {
         let (_, a) = x;
         let (_, b) = y;
