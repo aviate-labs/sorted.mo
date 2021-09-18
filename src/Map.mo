@@ -61,6 +61,14 @@ module {
 
         // Gets the value based on its index.
         public func getValue(n : Nat) : ?V {
+            switch (getIndex(n)) {
+                case (null)     { null; };
+                case (? (_, v)) { ?v;   };
+            };
+        };
+
+        // Gets the key-value pair based on its index.
+        public func getIndex(n : Nat) : ?(K, V) {
             switch (getKey(n)) {
                 case (null) { null; };
                 case (? k)  {
@@ -70,7 +78,7 @@ module {
                             assert(false);
                             null;
                         };
-                        case (? v) { ?v; };
+                        case (? v) { ?(k, v); };
                     };
                 };
             };
@@ -78,7 +86,7 @@ module {
 
         // Gets the index of the key k. Returns its associated index if it
         // existed or null otherwise.
-        public func getIndex(k : K) : ?Nat {
+        public func getIndexOf(k : K) : ?Nat {
             var i  = 0;
             var xs = keys;
             loop {
@@ -189,6 +197,14 @@ module {
 
         // Gets the value based on its index.
         public func getValue(n : Nat) : ?V {
+            switch (getIndex(n)) {
+                case (null)     { null; };
+                case (? (_, v)) { ?v;   };
+            };
+        };
+
+        // Gets the key-value pair based on its index.
+        public func getIndex(n : Nat) : ?(K, V) {
             switch (getKey(n)) {
                 case (null) { null; };
                 case (? k)  {
@@ -198,7 +214,7 @@ module {
                             assert(false);
                             null;
                         };
-                        case (? v) { ?v; };
+                        case (? v) { ?(k, v); };
                     };
                 };
             };
@@ -206,7 +222,7 @@ module {
 
         // Gets the index of the key k. Returns its associated index if it
         // existed or null otherwise.
-        public func getIndex(k : K) : ?Nat {
+        public func getIndexOf(k : K) : ?Nat {
             var i  = 0;
             var xs = keys;
             loop {

@@ -20,8 +20,8 @@ do {
     assert(Iter.toArray(m.entries()) == [(2, "c"), (0, "b")]);
     assert(m.remove(1) == null);
 
-    assert(m.getIndex(1) == null);
-    assert(m.getIndex(0) == ?1);
+    assert(m.getIndexOf(1) == null);
+    assert(m.getIndexOf(0) == ?1);
     assert(m.getKey(1) == ?0);
     assert(m.getValue(1) == ?"b");
 };
@@ -39,8 +39,8 @@ do {
     assert(Iter.toArray(m.entries()) == [(1, "a"), (2, "c")]);
     assert(m.remove(0) == null);
 
-    assert(m.getIndex(0) == null);
-    assert(m.getIndex(2) == ?1);
+    assert(m.getIndexOf(0) == null);
+    assert(m.getIndexOf(2) == ?1);
     assert(m.getKey(1) == ?2);
     assert(m.getValue(1) == ?"c");
 };
