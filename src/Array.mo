@@ -1,4 +1,5 @@
 import Array "mo:base/Array";
+import Buffer "mo:base/Buffer";
 import Order "mo:base/Order";
 
 import O "Order";
@@ -36,11 +37,13 @@ module {
     private func append<T>(
         xs : [[T]],
     ) : [T] {
-        var ys : [T] = [];
+        var size : Nat = 0;
+        for (x in xs.vals()) size += x.size();
+        let ys = Buffer.Buffer<T>(size);
         for (x in xs.vals()) {
-            ys := Array.append(ys, x);
+            for (v in x.vals()) ys.add(v);
         };
-        ys;
+        ys.toArray();
     };
 
     private func removeN<T>(

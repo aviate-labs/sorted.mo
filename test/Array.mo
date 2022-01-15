@@ -1,4 +1,6 @@
 import Array "mo:base/Array";
+import Buffer "mo:base/Buffer";
+import Iter "mo:base/Iter";
 import Nat "mo:base/Nat";
 import O "../src/Order";
 import Order "mo:base/Order";
