@@ -1,16 +1,14 @@
-import Hash "mo:base/Hash";
-import Iter "mo:base/Iter";
+import Hash "mo:base-0.7.3/Hash";
+import Iter "mo:base-0.7.3/Iter";
 import Map "../src/Map";
-import Nat "mo:base/Nat";
+import Nat32 "mo:base-0.7.3/Nat32";
 import O "../src/Order";
-import Text "mo:base/Text";
-
-import Debug "mo:base/Debug";
+import Text "mo:base-0.7.3/Text";
 
 do {
-    let m = Map.SortedMap<Nat, Text>(
-        0, Nat.equal, Hash.hash,
-        O.Descending(Nat.compare),
+    let m = Map.SortedMap<Nat32, Text>(
+        0, Nat32.equal, func (n : Nat32) : Nat32 { n },
+        O.Descending(Nat32.compare),
     );
     m.put(1, "a");
     m.put(0, "b");
@@ -27,8 +25,8 @@ do {
 };
 
 do {
-    let m = Map.SortedValueMap<Nat, Text>(
-        0, Nat.equal, Hash.hash,
+    let m = Map.SortedValueMap<Nat32, Text>(
+        0, Nat32.equal, func (n : Nat32) : Nat32 { n },
         O.Ascending(Text.compare),
     );
     m.put(1, "a");

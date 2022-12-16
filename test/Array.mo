@@ -1,9 +1,9 @@
-import Array "mo:base/Array";
-import Buffer "mo:base/Buffer";
-import Iter "mo:base/Iter";
-import Nat "mo:base/Nat";
+import Array "mo:base-0.7.3/Array";
+import Buffer "mo:base-0.7.3/Buffer";
+import Iter "mo:base-0.7.3/Iter";
+import Nat "mo:base-0.7.3/Nat";
 import O "../src/Order";
-import Order "mo:base/Order";
+import Order "mo:base-0.7.3/Order";
 import SArray "../src/Array";
 
 do {

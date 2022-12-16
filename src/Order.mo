@@ -1,4 +1,4 @@
-import Order "mo:base/Order";
+import Order "mo:base-0.7.3/Order";
 
 module {
     public type Order<V> = {

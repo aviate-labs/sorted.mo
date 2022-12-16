@@ -1,5 +1,5 @@
-import Order "mo:base/Order";
-import List "mo:base/List";
+import Order "mo:base-0.7.3/Order";
+import List "mo:base-0.7.3/List";
 
 import O "Order";
 

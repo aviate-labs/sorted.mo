@@ -1,7 +1,7 @@
-import List "mo:base/List";
-import Nat "mo:base/Nat";
+import List "mo:base-0.7.3/List";
+import Nat "mo:base-0.7.3/Nat";
 import O "../src/Order";
-import Order "mo:base/Order";
+import Order "mo:base-0.7.3/Order";
 import SList "../src/List";
 
 do {
